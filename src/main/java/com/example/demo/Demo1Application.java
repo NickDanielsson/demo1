@@ -1,6 +1,8 @@
 package com.example.demo;
 
+import com.example.demo.models.Category;
 import com.example.demo.models.Kompis;
+import com.example.demo.repositories.CategoryRepository;
 import com.example.demo.repositories.KompisRepository;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,17 +16,21 @@ public class Demo1Application {
 
     @Autowired
     private KompisRepository kompisRepository;
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(Demo1Application.class, args);
     }
 
+
     @Bean
     InitializingBean sendDatabase() {
         return () -> {
-            kompisRepository.save(new Kompis("John","@Rambo","123"));
-            kompisRepository.save(new Kompis("Fredrik","@Reinfeldt","123234"));
-            kompisRepository.save(new Kompis("Rebellen","@Almgren","123234"));
+            categoryRepository.save(new Category( "Mejeri"));
+
         };
     }
+
+
 }
