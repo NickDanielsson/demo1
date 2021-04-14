@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("https://grupp5hakimlivs.herokuapp.com")
+// @RequestMapping(path = "/demo")
 public class KompisController {
 
     @Autowired
