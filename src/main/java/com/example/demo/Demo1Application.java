@@ -28,6 +28,7 @@ public class Demo1Application {
         SpringApplication.run(Demo1Application.class, args);
     }
 
+    /*
 
     @Bean
     InitializingBean sendDatabase() {
@@ -39,7 +40,7 @@ public class Demo1Application {
         //    @Query(value = "1,'Tomater','Runda och fina tomater. Skölj och ha i salladen eller på smörgåsen. Observera att ursprungsland för denna produkt kan variera beroende på säsong och tillgång.','/images/fruit/tomatoes-1238255_640.jpg',39.9,1")
         };
 
-    }
+    } */
 
 
 }
