@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface KompisRepository extends CrudRepository<Kompis, Long> {
 
-    List<Kompis> findByName(String name);
+    Kompis findByName(String name);
     List<Kompis> findByEmail(String email);
     List<Kompis> findByPhonenr(String phonenr);
 }

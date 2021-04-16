@@ -12,37 +12,26 @@ public class Customer {
     private String lastname;
     private String phone;
     private String email;
-    @OneToOne(targetEntity = Adress.class)
-    private Adress adress;
-    @OneToMany(targetEntity = Orders.class)
-    private List<Orders> ordersList;
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public Customer() {}
 
-    public Customer(String firstname, String lastname, String phone, String email, Adress adress) {
+    public Customer(String firstname, String lastname, String phone, String email, String address) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.phone = phone;
         this.email = email;
-        this.adress = adress;
+        this.address = address;
     }
 
-
-    public List<Orders> getOrderList() {
-        return ordersList;
-    }
-
-    public void setOrderList(List<Orders> ordersList) {
-        this.ordersList = ordersList;
-    }
-
-    public Adress getAdress() {
-        return adress;
-    }
-
-    public void setAdress(Adress adress) {
-        this.adress = adress;
-    }
 
     public Long getId() {
         return id;

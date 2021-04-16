@@ -9,10 +9,11 @@ public class OrderInfo {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    @OneToOne(targetEntity = Orders.class)
+    @ManyToOne(targetEntity = Orders.class)
     private Orders orders;
-    @OneToMany(targetEntity = Product.class)
-    private List<Product> productList;
+    @ManyToOne(targetEntity = Product.class)
+    private Product product;
     private int quantity;
+
 }
 

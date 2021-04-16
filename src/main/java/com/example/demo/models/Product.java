@@ -10,7 +10,7 @@ public class Product {
     private Long id;
     private String title;
     private String description;
-    @OneToOne(targetEntity = Category.class)
+    @ManyToOne(targetEntity = Category.class)
     private Category category;
     private double price;
     private String image;

@@ -14,6 +14,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.Query;
 
+import java.util.List;
+
 @SpringBootApplication
 public class Demo1Application {
 
@@ -27,6 +29,28 @@ public class Demo1Application {
     public static void main(String[] args) {
         SpringApplication.run(Demo1Application.class, args);
     }
+/*
+    @Bean
+    public CommandLineRunner demo (KompisRepository kompisRepository) {
+        return (args -> {
+
+            categoryRepository.save(new Category("Mejeri"));
+            categoryRepository.save(new Category("Frukt"));
+          //  kompisRepository.save(new Kompis("Matte","matte@gmail","03456456"));
+           // kompisRepository.save(new Kompis("Jere","Jere@gmail","031231236"));
+
+            for (Kompis k: kompisRepository.findAll()){
+                System.out.println(k.toString());
+            }
+            System.out.println("ForEach lambda");
+            List<Kompis> list = (List<Kompis>) kompisRepository.findAll();
+            list.forEach(kompis -> System.out.println(kompis.toString()));
+
+            System.out.println("by name: ");
+            Kompis kompis = kompisRepository.findByName("Pavel");
+            System.out.println(kompis.toString());
+        });
+    }*/
 
     /*
 

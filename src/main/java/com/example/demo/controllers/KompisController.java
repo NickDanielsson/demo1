@@ -29,7 +29,12 @@ public class KompisController {
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Product> getAllKompisar(){
+    public @ResponseBody Iterable<Product> getAllProducts(){
         return productRepository.findAll();
+    }
+
+    @GetMapping(path="/allk")
+    public @ResponseBody Iterable<Kompis> getAllKompisar(){
+        return kompisRepository.findAll();
     }
 }

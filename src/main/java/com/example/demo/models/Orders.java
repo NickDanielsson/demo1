@@ -12,7 +12,7 @@ public class Orders {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    @OneToOne(targetEntity = Customer.class)
+    @ManyToOne(targetEntity = Customer.class)
     private Customer customer;
     private Timestamp timestamp;
     private Boolean orderComplete;

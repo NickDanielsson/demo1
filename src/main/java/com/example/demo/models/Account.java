@@ -1,3 +1,4 @@
+/*
 package com.example.demo.models;
 
 import javax.persistence.*;
@@ -11,3 +12,4 @@ public class Account {
     @OneToOne(targetEntity = Customer.class)
     private Customer customer;
 }
+*/
